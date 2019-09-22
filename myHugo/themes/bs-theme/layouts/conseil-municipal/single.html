@@ -1,0 +1,29 @@
+{{ partial "head.html" }}
+{{ partial "header.html" }}
+{{ partial "container.html" }}
+
+{{ $assocSections := default (slice "associations") }}
+{{ $section := where .Site.RegularPages "Section" "in" $assocSections }}
+{{ $section_count := len $section }}
+{{ if ge $section_count 1 }}
+{{ $section_assoc := index (.Site.Params.mainSections) 0 }}
+{{ $n_assoc := $.Param "recent_posts_number" | default 10 }}
+<div class="content-sidebar">
+    {{ range (first $n_assoc $section) }}
+        {{ if .Params.Important }}
+            <a class="assocs-spotlight" href="{{ .Permalink  }}">
+                <span class="spotlight">{{ .Title }}</span>
+            </a>
+        {{ end }}
+    {{ end }}
+</div>
+{{end}}
+{{ partial "sidebarclosing.html" }}
+
+        <div class="col-xs-12 col-sm-9">
+            <br>
+            <h2 class="test"> {{ .Params.FirstName }} </h2>
+            <h3> {{ .Params.LastName | upper }} </h3>
+
+{{ partial "containerclosing.html" }}
+{{ partial "footer.html" }}

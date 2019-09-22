@@ -1,0 +1,65 @@
+{{ partial "head.html" }}
+{{ partial "header.html" }}
+{{ partial "container.html" }}
+
+{{ $assocSections := default (slice "associations") }}
+{{ $section := where .Site.RegularPages "Section" "in" $assocSections }}
+{{ $section_count := len $section }}
+{{ if ge $section_count 1 }}
+{{ $section_assoc := index (.Site.Params.mainSections) 0 }}
+{{ $n_assoc := $.Param "recent_posts_number" | default 10 }}
+    <div class="content-sidebar">
+        {{ range (first $n_assoc $section) }}
+            {{ if .Params.Important }}
+                <a class="assocs-spotlight" href="{{ .Permalink  }}">
+                    <span class="spotlight">{{ .Title }}</span>
+                </a>
+            {{ end }}
+        {{ end }}
+    </div>
+{{end}}
+{{ partial "sidebarclosing.html" }}
+
+        <div class="col-xs-12 col-sm-9">
+            <br>
+            <div class="row container-events">
+                <div class="jumbotron">
+                    <h1 class="display-4">Welcome</h1>
+                    <div class="row">
+                        <div class="col-8">
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Integer ut interdum nisi. Curabitur sit amet blandit lectus, ac aliquam nulla.</p>
+                            <hr class="my-4">
+                            <p>
+                                Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
+                                Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
+                                Sed dui lacus, faucibus non rutrum nec, porta ut purus. Nunc tincidunt euismod dolor, 
+                                vitae tincidunt purus auctor ac.
+                            </p>
+                            <hr class="my-4">
+                            <p>
+                                Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
+                                Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
+                                Sed dui lacus, faucibus non rutrum nec, porta ut purus. Nunc tincidunt euismod dolor, 
+                                vitae tincidunt purus auctor ac.
+                            </p>
+                            <hr class="my-4">
+                            <p>
+                                Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
+                                Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
+                                Sed dui lacus, faucibus non rutrum nec, porta ut purus. Nunc tincidunt euismod dolor, 
+                                vitae tincidunt purus auctor ac.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <div class="welcome-fth">
+                                <img src="http://www.unitedneon.com/mediacenter/wp-content/uploads/2016/02/Old-Town-Hall-300x500.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{{ partial "containerclosing.html" }} 
+{{ partial "footer.html" }}
