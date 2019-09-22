@@ -113,6 +113,10 @@ h1 {
     height: auto;
 }
 
+.infos {
+    color: #495056;
+}
+
 .card {
     box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.025);
     border: none;
@@ -131,6 +135,21 @@ h1 {
 
 .link-event:hover {
     color: #1778BD;
+}
+
+.no-link {
+    color: #495056;
+}
+
+.info-event {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    color: #044F84;
 }
 
 /*

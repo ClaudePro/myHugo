@@ -22,8 +22,22 @@
 
         <div class="col-xs-12 col-sm-9">
             <br>
-            <h2 class="test"> {{ .Title }} </h2>
-            <h3> {{ .Params.When }} </h3>
+            <div class="row">
+                <div class="col-8 infos-event">
+                    <h2 class="title"> {{ .Title }} </h2>
+                    <hr>
+                    <p class="infos">Date: {{ .Params.When }} </p>
+                    <p class="infos">Address: {{ .Params.Address }} </p>
+                    <p class="infos">Postal Code: {{ .Params.PostalCode }} </p>
+                    <p class="infos">City: {{ .Params.City }} </p>
+                    <p class="infos">Label: {{ .Params.Label }} </p>
+                    <p class="infos">Description: {{ .Params.Description }} </p>
+                    <p class="infos">Association: {{ .Params.Association }} </p>
+                </div>
+                <div class="col-4">
+                    <img class="welcome-fth" src="https://openbookfestival.co.za/wp-content/uploads/Chikane-Breaking-a-Rainbow-300x500.jpg">
+                </div>
+            </div>
 
 {{ partial "containerclosing.html" }} 
 {{ partial "footer.html" }}

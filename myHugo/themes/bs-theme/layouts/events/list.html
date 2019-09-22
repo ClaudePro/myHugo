@@ -28,11 +28,11 @@
                         {{ if ne .Params.NotEvent true }}
                             <a href="{{ .Permalink  }}">
                                 <div class="card" style="width: 18rem;">
-                                    <img src="https://static.lexpress.fr/medias_8803/w_605,h_350,c_fill,g_north/v1393330929/orange-8_4507176.jpg" class="card-img-top" alt="...">
+                                    <img src="https://www.arts-in-the-city.com/wp-content/uploads/2018/06/festivals.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p><h2>{{ .Title }}</h2></p>
-                                        <p>{{ .Params.label }}</p>
-                                        <p>{{ .Params.when }}</p>
+                                        <p class="no-link">{{ .Params.label }}</p>
+                                        <p class="no-link">{{ .Params.when }}</p>
                                     </div>
                                 </div>
                             </a>

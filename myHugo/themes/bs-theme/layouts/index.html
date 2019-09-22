@@ -25,26 +25,24 @@
             <div class="row container-events">
                 <div class="jumbotron">
                     <h1 class="display-4">Welcome</h1>
+                    <hr>
                     <div class="row">
                         <div class="col-8">
                             <p class="lead">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                 Integer ut interdum nisi. Curabitur sit amet blandit lectus, ac aliquam nulla.</p>
-                            <hr class="my-4">
                             <p>
                                 Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
                                 Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
                                 Sed dui lacus, faucibus non rutrum nec, porta ut purus. Nunc tincidunt euismod dolor, 
                                 vitae tincidunt purus auctor ac.
                             </p>
-                            <hr class="my-4">
                             <p>
                                 Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
                                 Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
                                 Sed dui lacus, faucibus non rutrum nec, porta ut purus. Nunc tincidunt euismod dolor, 
                                 vitae tincidunt purus auctor ac.
                             </p>
-                            <hr class="my-4">
                             <p>
                                 Donec bibendum lacus accumsan tortor suscipit, vel sollicitudin velit eleifend. 
                                 Etiam convallis tempus tempor. Donec non libero id felis rutrum vestibulum ac ac felis. 
@@ -53,11 +51,28 @@
                             </p>
                         </div>
                         <div class="col-4">
-                            <div class="welcome-fth">
-                                <img src="http://www.unitedneon.com/mediacenter/wp-content/uploads/2016/02/Old-Town-Hall-300x500.jpg">
+                            <div>
+                                <img class="welcome-fth" src="http://www.unitedneon.com/mediacenter/wp-content/uploads/2016/02/Old-Town-Hall-300x500.jpg">
                             </div>
                         </div>
                     </div>
+                </div>
+                <hr>
+                <div class="row container-events">
+                    {{ range (where .Site.RegularPages "Section" "events").ByDate.Reverse | first 12 }}
+                        {{ if ne .Params.NotEvent true }}
+                            <a href="{{ .Permalink  }}">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://www.arts-in-the-city.com/wp-content/uploads/2018/06/festivals.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p><h2>{{ .Title }}</h2></p>
+                                        <p class="no-link">{{ .Params.label }}</p>
+                                        <p class="no-link">{{ .Params.when }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {{end}}
+                    {{ end }}
                 </div>
             </div>
 
