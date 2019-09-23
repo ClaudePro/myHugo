@@ -12,7 +12,7 @@ footer {
 }
 
 h1 {
-    color: #044F84;
+    color: #1ABC9C;
 }
 
 .container-events {
@@ -49,6 +49,7 @@ h1 {
 }
 
 .assocs-spotlight:hover {
+    color: #1ABC9C;
     text-decoration: none;
     left: 5px;
     transition: ease-in-out 2;
@@ -141,13 +142,13 @@ h1 {
 }
 
 .card-desc h3 {
-	color: #000000;
     font-weight: 600;
     font-size: 1.5em;
     line-height: 1.3em;
     margin-top: 0;
     margin-bottom: 5px;
     padding: 0;
+    transition: ease-in-out .1s;
 }
 
 .card-desc p {
@@ -190,6 +191,11 @@ a.btn-card {
     color: #fff;
 }
 
+.test {
+    margin-left: 4%;
+    color: #1ABC9C;
+}
+
 .header-event {
     position: absolute;
     top: 5%;
@@ -202,11 +208,12 @@ a.btn-card {
 }
 
 .link-event {
-    color: #044F84;
+    color: #1ABC9C;
 }
 
 .link-event:hover {
-    color: #1778BD;
+    color: orange;
+    transition: ease-in-out .1s;
 }
 
 .no-link {

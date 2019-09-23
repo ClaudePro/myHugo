@@ -65,7 +65,7 @@
                                 <span class="header-event">{{ .Title }}</span>
                                 <img src="{{ .Params.picture }}" class="card-img-top" alt="...">
                                 <div class="card-desc">
-                                    <a href="{{ .Permalink  }}"><h3>{{ .Title }}</h3></a>
+                                    <a class="link-event" href="{{ .Permalink  }}"><h3>{{ .Title }}</h3></a>
                                     <p class="no-link">Located at {{ .Params.label }}</p>
                                     <p class="no-link">Posted on {{ dateFormat "02.01.2006" .Params.when }}</p>
                                     <a href="{{ .Permalink  }}" class="btn-card">Read</a>   
