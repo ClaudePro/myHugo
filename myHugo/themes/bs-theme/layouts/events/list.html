@@ -26,16 +26,16 @@
             <div class="row container-events">
                     {{ range (where .Site.RegularPages "Section" "events").ByDate.Reverse }}
                         {{ if ne .Params.NotEvent true }}
-                            <a href="{{ .Permalink  }}">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="https://www.arts-in-the-city.com/wp-content/uploads/2018/06/festivals.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p><h2>{{ .Title }}</h2></p>
-                                        <p class="no-link">{{ .Params.label }}</p>
-                                        <p class="no-link">{{ .Params.when }}</p>
-                                    </div>
+                            <div class="card" style="width: 18rem;">
+                                <span class="header-event">{{ .Title }}</span>
+                                <img src="{{ .Params.picture }}" class="card-img-top" alt="...">
+                                <div class="card-desc">
+                                    <a href="{{ .Permalink  }}"><h3>{{ .Title }}</h3></a>
+                                    <p class="no-link">Located at {{ .Params.label }}</p>
+                                    <p class="no-link">Posted on {{ dateFormat "02.01.2006" .Params.when }}</p>
+                                    <a href="{{ .Permalink  }}" class="btn-card">Read</a>   
                                 </div>
-                            </a>
+                            </div>
                         {{end}}
                     {{ end }}
                 </div>

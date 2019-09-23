@@ -18,6 +18,7 @@
     {{ end }}
 </div>
 {{end}}
+
 {{ partial "sidebarclosing.html" }}
 
         <div class="col-xs-12 col-sm-9">
@@ -32,7 +33,7 @@
                     <p class="infos">City: {{ .Params.City }} </p>
                     <p class="infos">Label: {{ .Params.Label }} </p>
                     <p class="infos">Description: {{ .Params.Description }} </p>
-                    <p class="infos">Association: {{ .Params.Association }} </p>
+                    <p class="infos">Association: <a href="/associations/{{ .Params.associations }}"> {{ .Params.Association }}</a> </p>
                 </div>
                 <div class="col-4">
                     <img class="welcome-fth" src="https://openbookfestival.co.za/wp-content/uploads/Chikane-Breaking-a-Rainbow-300x500.jpg">
