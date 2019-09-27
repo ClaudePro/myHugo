@@ -22,17 +22,49 @@
 
         <div class="col-xs-12 col-sm-9">
             <br>
-            <h1 class="test"> Municipal Council ! </h1>
             {{ $assocSections := default (slice "conseil-municipal") }}
             {{ $section := where .Site.RegularPages "Section" "in" $assocSections }}
             {{ $section_count := len $section }}
             {{ if ge $section_count 1 }}
             {{ $section_assoc := index (.Site.Params.mainSections) 0 }}
+            <div class="row">
                 {{ $n_assoc := $.Param "recent_posts_number" | default 7 }}
                     {{ range (first $n_assoc $section) }}
-                            <li><a href="{{ .Permalink  }}">{{ .Params.FirstName }} {{ .Params.LastName | upper }}</a></li>
+                        <div class="col-4">
+                            <div class="cardpeople hovercard">
+                                <div class="cardheader"></div>
+                                <div class="avatar">
+                                    <img alt="" src="{{ .Params.photos }}">
+                                </div>
+                                <div class="info">
+                                    <div class="title">
+                                        <span>{{ .Params.FirstName }} {{ .Params.LastName | upper }}</span>
+                                    </div>
+                                    <div class="desc">{{ .Params.role }}</div>
+                                    <div class="desc">{{ .Params.info }}</div>
+                                    <div class="desc">{{ .Params.info2 }}</div>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                        href="https://plus.google.com/+ahmshahnuralam">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                    <a class="btn btn-primary btn-sm" rel="publisher"
+                                        href="https://plus.google.com/shahnuralam">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                                        <i class="fab fa-behance"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     {{ end }}
-            {{end}}
+                {{end}}
+            </div>
 
 {{ partial "containerclosing.html" }} 
 {{ partial "footer.html" }}
