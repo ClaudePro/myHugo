@@ -15,6 +15,14 @@ h1 {
     color: #1ABC9C;
 }
 
+a {
+    color: #1ABC9C;
+}
+
+a:hover {
+    color: rgb(20, 150, 124);
+}
+
 .container-events {
     justify-content: space-evenly;
 }
@@ -230,63 +238,6 @@ a.btn-card {
 .title {
     color: #044F84;
 }
-
-/*
-* Footer
-* --------------------------------------------------
-*/
-
-footer {
-    position: static;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.row-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #1ABC9C;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.content-footer {
-    display: flex;
-    align-items: center;
-}
-
-.content-footer2 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: rgba(255,255,255,.5);
-}
-
-.bs-lol {
-    color: rgba(255,255,255,.5);
-}
-
-.link-contact {
-    color: rgba(255,255,255,.5);
-    margin-right: 50px;
-    transition: ease-in-out .2s;
-}
-
-.link-contact:hover {
-    color: #ffffff;
-    text-decoration: none;
-    transition: ease-in-out .2s;
-}
-
-
-
-
-
 
 .cardpeople {
     padding-top: 20px;
@@ -530,3 +481,59 @@ footer {
 }
 
 .btn{ border-radius: 50%; width:32px; height:32px;  }
+
+.list-group-item {
+    border: none;
+}
+
+/*
+* Footer
+* --------------------------------------------------
+*/
+
+footer {
+    position: static;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.row-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1ABC9C;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.content-footer {
+    display: flex;
+    align-items: center;
+}
+
+.content-footer2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgba(255,255,255,.5);
+}
+
+.bs-lol {
+    color: rgba(255,255,255,.5);
+}
+
+.link-contact {
+    color: rgba(255,255,255,.5);
+    margin-right: 50px;
+    transition: ease-in-out .2s;
+}
+
+.link-contact:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transition: ease-in-out .2s;
+}

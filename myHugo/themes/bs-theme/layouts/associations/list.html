@@ -22,13 +22,14 @@
 
         <div class="col-xs-12 col-sm-9">
             <br>
-            <h1 class="test"> Associations ! </h1>
-            {{ $events := (where .Site.RegularPages "Section" "associations") }}
-            {{ range $events }}
-                    <li>
-                        <a href="{{ .Permalink  }}">{{ .Title }}</a>
-                    </li>
-            {{ end }}
+            <ul class="list-group list-group-flush">
+                {{ $events := (where .Site.RegularPages "Section" "associations") }}
+                {{ range $events }}
+                        <li class="list-group-item">
+                            <a href="{{ .Permalink  }}">{{ .Title }}</a>
+                        </li>
+                {{ end }}
+            </ul>
 
 {{ partial "containerclosing.html" }}
 {{ partial "footer.html" }}
