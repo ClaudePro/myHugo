@@ -228,6 +228,8 @@ a.btn-card {
     color: #495056;
 }
 
+
+
 .info-event {
     display: flex;
     flex-direction: column;
@@ -235,8 +237,16 @@ a.btn-card {
     align-items: center;
 }
 
+.margin-association-img {
+    margin-bottom: 291px;
+}
+
+.margin-event-img {
+    margin-bottom: 126px;
+}
+
 .title {
-    color: #044F84;
+    color: #1ABC9C;
 }
 
 .cardpeople {
@@ -480,10 +490,22 @@ a.btn-card {
     margin-bottom: 17px;
 }
 
-.btn{ border-radius: 50%; width:32px; height:32px;  }
+.special{ border-radius: 50%; width:32px; height:32px;  }
 
 .list-group-item {
     border: none;
+    margin-bottom: 10px;
+}
+
+.list-group-flush {
+    margin-bottom: 43px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*

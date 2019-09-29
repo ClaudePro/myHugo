@@ -21,7 +21,10 @@
 {{ partial "sidebarclosing.html" }}
         <div class="col-xs-12 col-sm-9">
             <br>
-            <h1 class="test">Upcomings</h1>
+            <div class="title-container">
+                <h1 class="test">Upcomings</h1>
+                <a href="/events/archives/" class="btn-card">Past events</a>
+            </div>
             <hr>
             <div class="row container-events">
                 {{ range (where .Site.RegularPages "Section" "events").ByDate.Reverse }}
