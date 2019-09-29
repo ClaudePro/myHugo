@@ -1,8 +1,8 @@
 ---
 Title: ""
 Address: ""
-PostalCode: ""
-City: ""
+PostalCode: "75000"
+City: "Paris"
 Label: ""
 When: {{ .Date }}
 Description: ""
